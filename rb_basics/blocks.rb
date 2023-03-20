@@ -4,7 +4,7 @@ def run_block
   puts 'after'
 end
 
-run_block {puts 'running block with curly braces'}
+run_block { puts 'running block with curly braces' }
 
 run_block do
   puts 'running block with do..end'
@@ -16,12 +16,11 @@ def run_param_block(a, b)
   puts 'after'
 end
 
-run_param_block(10, 20) {|a, b| puts a + b}
+run_param_block(10, 20) { |a, b| puts a + b }
 
 run_param_block(10, 20) do |a, b|
   puts a + b
 end
-
 
 def test
   puts 'before'
@@ -35,17 +34,17 @@ test do
   puts 'in block'
 end
 
-test {puts 'in block'}
+test { puts 'in block' }
 
 def foo(a, b)
-  yield(a,b)
+  yield(a, b)
 end
 
-foo(1,2) do |a,b|
-  puts a+b
+foo(1, 2) do |a, b|
+  puts a + b
 end
 
-foo(10,20){|a,b| puts a+b}
+foo(10, 20) { |a, b| puts a + b }
 
 def accept_block a
   puts 'before yield'
@@ -57,4 +56,20 @@ accept_block(1) do |a|
   puts "param a- #{a}"
 end
 
-accept_block(1) {|a| puts "param a- #{a}"}
+accept_block(1) { |a| puts "param a- #{a}" }
+
+def missing_block
+  puts 'before'
+  yield
+  puts 'after'
+end
+
+missing_block # This to give error - `missing_block': no block given (yield) (LocalJumpError)
+
+def missing_block
+  puts 'before'
+  yield if block_given?
+  puts 'after'
+end
+
+missing_block # This should not invoke block
