@@ -1,4 +1,3 @@
-
 module Test
   def Test.m1
     puts 'm1'
@@ -8,7 +7,6 @@ module Test
     puts 'm2'
   end
 end
-
 
 Test.class_eval do
   def m3
@@ -40,7 +38,6 @@ class Foo
   end
 end
 
-
 module Oyy
   def k1
     puts 'k1'
@@ -53,6 +50,10 @@ end
 
 class Bar
   extend Oyy
+
+  def self.class_meth
+    Oyy.k2
+  end
 end
 
 Bar.k1
@@ -71,7 +72,6 @@ class Barrr < Foo
   end
 end
 
-
 nil.nil?
 ''.nil?
 nil.blank?
@@ -85,7 +85,6 @@ nil.empty?
 0.present?
 "\t\n".empty?
 "\t\n".present?
-
 
 nil.nil? - true
 ''.nil? - false
@@ -138,7 +137,6 @@ Studentt.new.test2
 Studentt.new.test4
 Studentt.new.test5
 
-
 class Userr
   def age
 
@@ -157,9 +155,8 @@ end
 
 ['100', '129', '200', '130', '120'].sort
 
-
 class Foo
   def bar(a, b)
-    a+b
+    a + b
   end
 end
