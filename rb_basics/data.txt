@@ -1,1 +1,1 @@
-short writeshort append
+direct write
