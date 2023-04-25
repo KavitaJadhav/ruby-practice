@@ -1,0 +1,32 @@
+REST = Representational State Transfer
+API = Application Application Programming Interface
+
+REST is stateless - Every request should contain information required to complete request. request are not dependent of previous request
+
+Two types of resources
+1. Collection - http://api.example.com/users
+2. Single member -http://api.example.com/users/{id}
+
+Use the “plural” name to denote the collection resource archetype.
+Use “verb” to denote controller archetype(acton). - http://api.example.com/users/{id}/activate
+
+
+HTTP GET http://api.example.com/device-management/managed-devices  //Get all devices
+HTTP POST http://api.example.com/device-management/managed-devices  //Create new Device
+HTTP GET http://api.example.com/device-management/managed-devices/{id}  //Get device for given Id
+HTTP PUT http://api.example.com/device-management/managed-devices/{id}  //Update device for given Id
+HTTP DELETE http://api.example.com/device-management/managed-devices/{id}  //Delete device for given Id
+
+Consistency in urls --> http://api.example.com/device-management/managed-devices/{id}/scripts/{id}
+1. Use forward slash (/) to indicate hierarchical relationships
+2. Do not use trailing forward slash (/) in URIs
+3. Use hyphens (-) to improve the readability of URIs
+4. Do not use underscores ( _ ) ->  (_) character can either get partially obscured or completely hidden in some browsers or screens.
+5. Use lowercase letters in URIs
+6. Do not use file extensions -> http://api.example.com/device-management/managed-devices.xml --> device-management/managed-devices
+7. Never use CRUD function names in URIs- HTTP method(Get, post, put, delete) etc should indicate action instead of users/{id}/delete
+8. Use query component to filter URI collection - ?region=USA&brand=XYZ
+
+
+
+

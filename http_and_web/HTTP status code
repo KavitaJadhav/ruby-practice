@@ -1,0 +1,50 @@
+HTTP -Hyper Text Transfer Protocol
+HTTPS -Hyper Text Transfer Protocol Secure
+WebDAV -Web-based Distributed Authoring and Versioning
+
+Status codes -
+Informational responses (100 – 199)
+Successful responses (200 – 299)
+Redirection messages (300 – 399)
+Client error responses (400 – 499)
+Server error responses (500 – 599)
+
+
+100 Continue - This interim response indicates that the client should continue the request or ignore the response if the request is already finished.
+101 Switching Protocols - This code is sent in response to an Upgrade request header from the client and indicates the protocol the server is switching to.
+102 Processing - This code indicates that the server has received and is processing the request, but no response is available yet.
+103 Early Hints Experimental - This status code is primarily intended to be used with the Link header, letting the user agent start preloading resources while the server prepares a response.
+
+200 OK- The request succeeded. (response is received or entity is created/updated)
+201 Created - The request succeeded, and a new resource was created as a result
+202 Accepted - Request is received and scheduled for action
+203 Non-Authoritative Information -  returned metadata is not exactly the same - response is returned from local copy mirror server
+204 No Content - empty response
+206 Partial Content - This response code is used when the Range header is sent from the client to request only part of a resource.
+
+300 Multiple Choices - The request has more than one possible response. The user agent or user should choose one of them. (There is no standardized way of choosing one of the responses, but HTML links to the possibilities are recommended so the user can pick.)
+301 Moved Permanently - The URL of the requested resource has been changed permanently. The new URL is given in the response.
+302 redirect/Found - URI of requested resource has been changed temporarily.(request is redirected to a new url)
+304 Not Modified - response is not modified. Client can continue using existing cache version
+
+400 Bad Request - request is not per required format or missing details
+401 Unauthorized - User is unauthenticated
+402 Payment Required Experimental - reversed response code. not used much
+403 Forbidden - unauthorised request, do not have permission
+404 Not Found - requested url or resource not present
+405 Method Not Allowed - URL is present but can not be called by client
+411 Length Required - Server rejected the request because the Content-Length header field is not defined and the server requires it.
+413 Payload Too Large - Request entity is larger than limits defined by server.
+422 Unprocessable entity - The request was well-formed but was unable to be followed due to semantic errors.
+429 Too Many Requests - user has sent too many requests in span of time
+
+500 Internal Server Error - The server has encountered a situation it does not know how to handle.
+501 Not Implemented - The request method is not supported by the server and cannot be handled.
+502 Bad Gateway - while working as a gateway to get a response needed to handle the request, got an invalid response.
+503 Service Unavailable - requested url/dns is not accessible(during deployment etc)
+504 Gateway Timeout -  server is acting as a gateway and cannot get a response in time.
+
+
+
+
+
