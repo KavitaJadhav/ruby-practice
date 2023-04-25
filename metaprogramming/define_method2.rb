@@ -11,7 +11,7 @@ String.add_method("sum") do |a, b|
   puts a + b
 end
 String.add_method("sub") do |a, b|
-  puts "In Sum method"
+  puts "In Sub method"
   puts a - b
 end
 

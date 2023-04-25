@@ -81,6 +81,7 @@ IncludeModule.new.method3 # class_eval is used to monkey patch new code in class
 # ------------------------------------------------------------------------------------------------------------------
 
 #Scenario - calling module class method from class method of including class
+# module class method can not be called as class method directly(outside class)
 module Test
   def Test.method4
     puts 'module class method4'
@@ -111,4 +112,3 @@ IncludeModule2.class_method
 
 
 # ------------------------------------------------------------------------------------------------------------------
-

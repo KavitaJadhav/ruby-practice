@@ -1,5 +1,5 @@
 # Lambdas are defined with -> {} and procs with Proc.new {}.
-# Procs return from the current method, while lambdas return from the lambda itself.
+# Procs return from the current method/execution context, while lambdas return from the lambda itself.
 # Procs don’t care about the correct number of arguments, while lambdas will raise an exception.
 # There is no dedicated Lambda class. A lambda is just a special Proc object
 
@@ -56,7 +56,7 @@ p call_proc(proc)
 
 
 # ------
-# variables used in proc should be defined before creating proc. Values of these variables can be updated later. When proc is caled. It will use latest value like above
+# variables used in proc should be defined before creating proc. Values of these variables can be updated later. When proc is called. It will use latest value like above
 
 proc = Proc.new { foo }
 foo = 1

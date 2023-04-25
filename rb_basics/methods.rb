@@ -35,19 +35,19 @@ nil.empty? - #undefined method `empty?' for nil:NilClass
 # ------------------------------------------------------------------------------------------------------------------
 # Rails
 
-nil.nil?
-''.nil?
-nil.blank?
-false.blank?
-"".empty?
-" ".empty?
-{}.empty?
-nil.empty?
-"".present?
-" ".present?
-0.present?
-"\t\n".empty?
-"\t\n".present?
+nil.nil? - true
+''.nil? -false
+nil.blank? -true
+false.blank? -true
+"".empty? - true
+" ".empty? -false
+{}.empty? - true
+nil.empty? #undefined method `empty?' for nil:NilClass (NoMethodError)
+"".present? - false
+" ".present? -false
+0.present? - true
+"\t\n".empty? - false
+"\t\n".present? - false
 
 # ------------------------------------------------------------------------------------------------------------------
 

@@ -1,3 +1,5 @@
+# Ruby supports only single class inheritance, it does not support multiple class inheritance but it supports mixins.
+
 # Ruby access modifiers
 
 # Public
