@@ -1,0 +1,10 @@
+Managed/Unmanaged database
+- A managed database is a cloud computing service in which a cloud service provider is paid to manage the underlying infrastructure while providing the company with access to the database itself.
+- A self-managed (or unmanaged) database is one in which the database software runs on virtual machines in a cloud environment.
+
+
+Trigger
+-Trigger is stored in the Database and fired implicitly when a triggering event occurs
+
+Index
+ -The concepts of Index in Oracle, MySQL, and PostgreSQL are the same but the syntaxes are different.

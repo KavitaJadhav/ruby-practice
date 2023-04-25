@@ -1,0 +1,31 @@
+Free database if unmanaged(running on virtual machine in cloud)
+RDBMS
+Used for small to medium size application
+Avoid using it for complex data - data larger in size in thousand bytes as performance is impacted as data grows
+Does not support data partitions
+
+
+Triggers
+-Trigger will be activated when a specified event is executed for the table.
+ The trigger can be executed for INSERT, UPDATE, and DELETE and it can be called before or after the event.
+
+Index
+ -The concepts of Index in Oracle, MySQL, and PostgreSQL are the same but the syntaxes are different.
+
+Backup in MySQL
+In a MySQL database, if you use the backup utility then the data is derived as SQL statements.
+ Hence, backing up and restoring large data can take a huge time because of the performance of various SQL statements.
+  Moreover, to bypass inequality, MySQL secures the database throughout the backup method.
+  Still, database administrators can revoke this by applying the mysqldump utility using a particular flag “:–single-transaction”.
+
+Package
+- Package is not available
+
+Restore
+-backing up and restoring large data can take a huge time because of the performance of various SQL statements.
+
+Backup
+ it is essential to terminate all connections to that particular database before restoring and making the backup file.
+ The psq utility enables users to restore SQL script files created by the pg_dump, pg_dumpall utilities.
+ These utilities are responsible for generating suitable backed up files.
+

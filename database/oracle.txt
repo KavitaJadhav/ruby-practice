@@ -1,0 +1,33 @@
+Free/Paid database - Some functionality is free.
+For enterprise application recommended to use paid version
+RDBMS
+Used for large size application
+it is fast with complex data
+Supports data partitions
+support sql and psql commands
+
+developed - 1977
+edition - standered, express, enterprised -
+runs on windows, unix, macos, Linux
+
+
+Triggers
+-Trigger can be used to implement multiple business practices that cannot be implemented using integrity constraints such as UNIQUE, NOT NULL, and CHECK.
+
+Index
+ -The concepts of Index in Oracle, MySQL, and PostgreSQL are the same but the syntaxes are different.
+
+Backup in Oracle
+The backup is the most important utility of Oracle.
+ It belongs to the database administrator.
+ One can utilize the BACKUP command to back up the main or a copy of a database, tablespace, or control file.
+ It can also be used to take a backup of the server parameter file, archived redo log file, or backup set.
+
+ Package
+ Just like a procedure, a package is also a schema object that gathers rationally associated variables, constants, subprograms, cursors, and exceptions.
+  A package is collected and saved in the database.
+
+Restore
+-  In oracle, to restore a dynamic backup of a file is to build it and make it accessible to the Oracle database server.
+To redeem a reestablished datafile is to renew it by utilizing redo logs, that is, documents of modifications performed to the database after the backup was taken
+

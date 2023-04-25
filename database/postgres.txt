@@ -1,0 +1,23 @@
+Opensource database
+rdbms (Addition features - views, procedures, indexes, triggers)
+Supports SQL commands
+used with large application, It can handle large data
+Supports datatype - video, text, audio, images
+Developed in c language
+
+Triggers
+- Trigger is also one special function.
+ This special function is called automatically whenever an insert, update, and delete events occur. These are user-defined triggers.
+ PostgreSQL gives two main triggers: row and statement-level triggers.
+
+Index
+ -The concepts of Index in Oracle, MySQL, and PostgreSQL are the same but the syntaxes are different.
+
+Backup in PostgreSQL
+PostgreSQL database allows users to take backup using a utility.
+ It contains the pg_dump utility to analyze backing up a separate database.
+ This command is fired as a user with reading permissions.
+ The backup utility comes under the database administrator command.
+
+Package
+- Package is not available
