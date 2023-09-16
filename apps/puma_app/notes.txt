@@ -1,0 +1,25 @@
+.ru extension - rack up
+
+Command to run app:
+puma - Run Puma server directly.
+rackup - rack runs puma server
+
+How rack works:
+- flow - browser_request -> nginx -> puma -> app (rack comes in-between of puma and app)
+- app frameworks(ruby, rails, sinatra)
+- app servers(puma, unicorn, webrick)
+- app can be run with any the app server. app servers need to know entrypoint of the app. app need to know conventions/configurations of the server
+- rack comes between app and app servers, app and app servers doesn't need to know about each others. rack will take care of that.
+
+
+puma/rackup command output -
+* Puma version: 5.6.7 (ruby 3.2.1-p31) ("Birdie's Version")
+*  Min threads: 0
+*  Max threads: 5
+*  Environment: development
+*          PID: 47972
+* Listening on http://127.0.0.1:9292
+* Listening on http://[::1]:9292
+
+
+{ "rack.version" => [1, 6], "rack.errors" => #>>, "rack.multithread"=>true, "rack.multiprocess"=>false, "rack.run_once"=>false, "rack.url_scheme"=>"http", "SCRIPT_NAME"=>"", "QUERY_STRING"=>"", "SERVER_PROTOCOL"=>"HTTP/1.1", "SERVER_SOFTWARE"=>"puma 5.6.7 Birdie's Version", "GATEWAY_INTERFACE"=>"CGI/1.2", "REQUEST_METHOD"=>"GET", "REQUEST_PATH"=>"/", "REQUEST_URI"=>"/", "HTTP_VERSION"=>"HTTP/1.1", "HTTP_HOST"=>"127.0.0.1:9292", "HTTP_CONNECTION"=>"keep-alive", "HTTP_SEC_CH_UA"=>"\"Chromium\";v=\"116\", \"Not)A;Brand\";v=\"24\", \"Google Chrome\";v=\"116\"", "HTTP_SEC_CH_UA_MOBILE"=>"?0", "HTTP_SEC_CH_UA_PLATFORM"=>"\"macOS\"", "HTTP_UPGRADE_INSECURE_REQUESTS"=>"1", "HTTP_USER_AGENT"=>"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36", "HTTP_ACCEPT"=>"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7", "HTTP_SEC_FETCH_SITE"=>"none", "HTTP_SEC_FETCH_MODE"=>"navigate", "HTTP_SEC_FETCH_USER"=>"?1", "HTTP_SEC_FETCH_DEST"=>"document", "HTTP_ACCEPT_ENCODING"=>"gzip, deflate, br", "HTTP_ACCEPT_LANGUAGE"=>"en-GB,en-US;q=0.9,en;q=0.8", "puma.request_body_wait"=>0, "SERVER_NAME"=>"127.0.0.1", "SERVER_PORT"=>"9292", "PATH_INFO"=>"/", "REMOTE_ADDR"=>"127.0.0.1", "puma.socket"=>#, "rack.hijack?"=>true, "rack.hijack"=>#, "rack.input"=>#>, "rack.after_reply"=>[], "puma.config"=>#"development", :pid=>nil, :Port=>9292, :Host=>"localhost", :AccessLog=>[], :config=>"/Users/kavitamadhukarjadhav/work/pet_projects/ruby-practice/apps/puma_app/config.ru", :binds=>["tcp://localhost:9292"], :app=>#>, @content_length=nil>>, @logger=#>>>}, @file_options={}, @default_options={:min_threads=>0, :max_threads=>5, :log_requests=>false, :debug=>false, :binds=>["tcp://0.0.0.0:9292"], :workers=>0, :silence_single_worker_warning=>false, :mode=>:http, :worker_check_interval=>5, :worker_timeout=>60, :worker_boot_timeout=>60, :worker_shutdown_timeout=>30, :worker_culling_strategy=>:youngest, :remote_address=>:socket, :tag=>"puma_app", :environment=>"development", :rackup=>"config.ru", :logger=>#>, :persistent_timeout=>20, :first_data_timeout=>30, :raise_exception_on_sigterm=>true, :max_fast_inline=>10, :io_selector_backend=>:auto, :mutate_stdout_and_stderr_to_sync_on_write=>true, :Verbose=>false, :Silent=>false, :preload_app=>false}>, @plugins=#, @user_dsl=#, @options={:environment=>"development", :pid=>nil, :Port=>9292, :Host=>"localhost", :AccessLog=>[], :config=>"/Users/kavitamadhukarjadhav/work/pet_projects/ruby-practice/apps/puma_app/config.ru", :binds=>["tcp://localhost:9292"], :app=>#>, @content_length=nil>>, @logger=#>>>}, @plugins=[]>, @file_dsl=#, @options={}, @plugins=[]>, @default_dsl=#, @options={:min_threads=>0, :max_threads=>5, :log_requests=>false, :debug=>false, :binds=>["tcp://0.0.0.0:9292"], :workers=>0, :silence_single_worker_warning=>false, :mode=>:http, :worker_check_interval=>5, :worker_timeout=>60, :worker_boot_timeout=>60, :worker_shutdown_timeout=>30, :worker_culling_strategy=>:youngest, :remote_address=>:socket, :tag=>"puma_app", :environment=>"development", :rackup=>"config.ru", :logger=>#>, :persistent_timeout=>20, :first_data_timeout=>30, :raise_exception_on_sigterm=>true, :max_fast_inline=>10, :io_selector_backend=>:auto, :mutate_stdout_and_stderr_to_sync_on_write=>true, :Verbose=>false, :Silent=>false, :preload_app=>false}, @plugins=[]>>, "rack.tempfiles"=>[]}
