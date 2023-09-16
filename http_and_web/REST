@@ -1,5 +1,5 @@
 REST = Representational State Transfer
-API = Application Application Programming Interface
+API = Application Programming Interface
 
 REST is stateless - Every request should contain information required to complete request. request are not dependent of previous request
 

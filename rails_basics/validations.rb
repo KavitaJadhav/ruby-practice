@@ -1,6 +1,7 @@
 class User
 end
 
+validates_presence_of :name
 validates_absence_of :name
 validates :name, presence: true
 validates_associated
@@ -25,19 +26,19 @@ save
 save!
 update
 update!
-update_attributes
 
 
-# invoking methods
+# invoking methods(Validation callbacks execute after these methods)
 Create
 create!
 save
 save!
 update
 update!
+update_attributes
 
 
-# skip validations
+# skip validations(Validation callbacks skipped after these methods)
 update_column
 update_columns
 update_counters

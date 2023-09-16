@@ -1,0 +1,44 @@
+ruby basics
+-hash
+-lambada
+-proc
+-enum
+-inheritence
+-module
+-concern
+-loops
+-versions
+-Singleton
+Metaprogramming
+DS
+-stack
+-queue
+-link list
+-tree
+-graph
+Rails
+-rails 6 new things
+-rails 7 new things
+-chatbot pet project
+-validations
+-callbacks
+-cross access origin
+-initilisers
+-redis
+-puma
+-nginx
+-write sample gem(rubygames)
+redis
+AWS certification revision
+Grafana, Prometheous
+Splunk query
+databases differences
+network
+-http vs https
+-http error code
+Design Patterns
+Solid Principles
+high level design
+
+
+
