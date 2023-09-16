@@ -8,6 +8,12 @@
 # }
 
 
+# *args - (Single splat) - used to pass multiple arguments as an array
+# args is an array
+
+# **args - (Single splat) - used to pass arguments as an hash parameters or named parameters. It works only with named parameters
+# args is a hash
+
 class Enum
   def self.enum(**args)
     args.each do |name, values|
@@ -29,7 +35,7 @@ class Enum
 end
 
 class User < Enum
-  enum status: [:active, :pending]
+  enum status: [:active, :pending], role: [:dev, :qa]
 end
 
 user = User.new

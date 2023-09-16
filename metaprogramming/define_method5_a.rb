@@ -3,16 +3,16 @@
 #<Article:0x000000010632d870 @name="a", @author="b">
 
 class Model
-  @@fields = []
+  # @@fields = []
 
   def self.field name
     attr_accessor(name)
-    @@fields << name
+    # @@fields << name
   end
 
-  def initialise
-    @fields = @@fields
-  end
+  # def initialise
+  #   @fields = @@fields
+  # end
 end
 
 class Article < Model

@@ -15,6 +15,7 @@ class Model
     end
   end
 
+  # initialise method is added make fields available on object
   def initialise
     @fields = @@fields
   end

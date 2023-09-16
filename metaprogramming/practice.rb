@@ -1,14 +1,22 @@
+module Test
+  def method1
+    puts 'method1'
+  end
 
-validate_presense_of :name
-validate name, presence: true
-validate_uniqness_of :name
-validate_uniqness_of :name, scope :id
-validate_inclusion_of name, [kavita, jyoti]
+  def method2
+    puts 'module method2'
+  end
+end
+
+class IncludeModule
+  prepend Test
+
+  def method2
+    puts 'class method2'
+  end
+end
 
 
-has_one - address
-belongs_to: company
-
-
-
-name,  uniqness:true
+IncludeModule.new.method1
+# method1
+IncludeModule.new.method2

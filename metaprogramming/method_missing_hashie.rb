@@ -2,7 +2,6 @@
 # Object < SimpleObject -
 # Array,String < Object
 
-
 # When method_missing overridden, overwrite respond_to_missing?
 class Hashie
   def initialize
@@ -19,7 +18,7 @@ class Hashie
   end
 
   def respond_to_missing?(name, *args)
-    true
+    @@values.keys.include?(name.to_s)
   end
 end
 
