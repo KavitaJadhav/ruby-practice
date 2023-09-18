@@ -1,0 +1,11 @@
+Action text:
+- Introduced in rails 6
+- read and write replica
+- multiple databases
+- update migration, model command to select database
+
+
+
+
+
+Rails 6 introduces native support for multiple databases within a single application. This enhancement allows developers to configure models to connect with different databases, facilitating the development of applications that utilize multiple data sources. Whether you’re building a microservices architecture or need to integrate with external systems, Rails 6 makes it easier to manage and query data from diverse databases.

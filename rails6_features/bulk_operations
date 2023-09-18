@@ -1,0 +1,7 @@
+Bulk Insert and Upsert
+-insert_all
+-update_all
+-upsert_all
+
+-It won’t fire any callbacks
+-activerecord-import gem was used before

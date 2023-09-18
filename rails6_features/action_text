@@ -1,0 +1,11 @@
+Action text:
+- Introduced in rails 6
+- integrates the Trix editor into Rails
+- enables users to format text, embed images and videos, and create links
+
+
+
+
+
+
+Action Text is another powerful addition to Rails 6, offering rich-text editing capabilities. It integrates the Trix editor into Rails and provides a seamless way to handle rich content in applications. Action Text enables users to format text, embed images and videos, and create links, all in a user-friendly interface. With this feature, developers can effortlessly incorporate rich-text functionality into their applications, enhancing the user experience.

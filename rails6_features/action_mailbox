@@ -1,0 +1,11 @@
+Action Mailbox:
+- Introduced in rails 6
+- app can receive emails and convert these emails in app entities likes responses, comments, posts
+- Instead of manual work of copying user emails in app data, now workflows can be automated
+
+
+
+
+
+
+Action Mailbox is a significant addition to Rails 6 that simplifies the handling of inbound emails. It allows developers to build applications that can directly receive and process incoming emails. With Action Mailbox, you can create automated email processing workflows, such as converting emails into comments or forum posts. This feature streamlines email integration and makes it easier to build robust applications with email capabilities.
