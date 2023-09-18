@@ -1,5 +1,5 @@
 # Lambdas are defined with -> {} and procs with Proc.new {}.
-# Procs return from the current method/execution context, while lambdas return from the lambda itself.
+# Procs return from the current method/execution context(no further execution), while lambdas return from the lambda itself.
 # Procs don’t care about the correct number of arguments, while lambdas will raise an exception.
 # There is no dedicated Lambda class. A lambda is just a special Proc object
 
@@ -29,11 +29,11 @@ hello1
 # after lambda call
 
 def hello2
-  puts 'before lambda call'
+  puts 'before proc call'
 
   proc = Proc.new { return "Hello from proc" }
   puts proc.call
-  puts 'after lambda call'
+  puts 'after proc call'
 end
 
 hello2

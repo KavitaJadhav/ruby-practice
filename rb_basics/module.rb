@@ -43,7 +43,7 @@ IncludeModule.new.method1
 IncludeModule.new.method2
 # module method2
 IncludeModule.ancestors
-# [Test, IncludeModule, Test, Object, PP::ObjectMixin, Kernel, BasicObject]
+# [Test, IncludeModule, Object, PP::ObjectMixin, Kernel, BasicObject]
 
 # ------------------------------------------------------------------------------------------------------------------
 class IncludeModule

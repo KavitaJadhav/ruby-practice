@@ -18,7 +18,7 @@ class Hashie
   end
 
   def respond_to_missing?(name, *args)
-    @@values.keys.include?(name.to_s)
+    @pairs.keys.include?(name.to_s)
   end
 end
 

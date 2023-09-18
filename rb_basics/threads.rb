@@ -152,6 +152,7 @@ class ThreadDemo4
     puts "#{value}- outside thread"
 
     t.join
+    puts "#{value}- after thread complete"
   end
 
   def call_without_param
@@ -166,12 +167,15 @@ class ThreadDemo4
     puts "#{value}- outside thread"
 
     t.join
+    puts "#{value}- after thread complete"
   end
 end
 
 ThreadDemo4.new.call_with_param # original value can be used in thread by passing it as parameter
 # changed- outside thread
-# original- in thread
+# original- in thread -> thread will have its own variable for params passed by value
+# changed- after thread complete
 ThreadDemo4.new.call_without_param
 # changed- outside thread
-# changed- in thread
+# changed- in thread -> thread is reffering to same variable from main thread(memory)
+# changed- after thread complete
