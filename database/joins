@@ -1,0 +1,34 @@
+employees
+    - id
+    - name
+    - email
+    - department_id
+    - manager_id
+Departments
+    - id
+    - name
+
+join(inner join) - Returns record present in both tables. ON clause is used with  where condition
+Eg. return employees had department info
+ - select * from employees u join departments d on u.department_id = d.id;
+
+left join(left outer join) - Returns record present in both tables and records present in left table. ON clause is used with  where condition
+Eg. return employees along with department information
+ - select * from employees u left join departments d on u.department_id = d.id;
+
+right join(right outer join) - Returns record present in both tables and records present in right table. ON clause is used with  where condition
+Eg. return all department info along with employees
+ - select * from employees u right join departments d on u.department_id = d.id;
+
+full join(full outer join) - Returns record present in both tables along with matching data in opposite table. ON clause is used with  where condition
+will create uniq row for each record in both table. if row has references in other table then it will merge 2 uniq records each from both tables. It can return lots of data
+Eg. return employees had department info
+ - select * from employees u full join departments d on u.department_id = d.id;
+
+cross join - map record with every other record . m*n records can be returned . ON clause is not used as it simply maps all records
+Eg. return employees had department info
+ - select * from employees u cross join departments d;
+ 
+self join - join condition is performed on with same table (eg. employees table has manager_id. Manager is another employees). ON clause is used with where condition for column with foreign key to same table.
+Eg. Return employee name , email along with manager's name, email
+- select e.name, e.email, m.name, m.email from employee e join employee m on e.manager_id=m.id;

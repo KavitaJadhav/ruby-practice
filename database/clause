@@ -1,0 +1,23 @@
+employees
+    - id
+    - name
+    - email
+    - department_id
+    - manager_id
+Departments
+    - id
+    - name
+
+group_by - Used to group items based on column
+Eg - get count of employees for each department
+- select department_id, count(*) from employees group by department_id;
+
+
+having - Used to add condition with group_by clause.
+Eg - get count of employees for each department. return only departments with more than 10 employees
+- select department_id, count(*) from employees group by department_id having count(*) > 10;
+
+order_by - used to return results in ASC/DESC order of column. default order is ASC. It can be used with or without groups
+- select department_id, count(*) from employees group by department_id order by department_id;
+- select * from employees order by department_id
+
