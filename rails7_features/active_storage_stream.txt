@@ -1,0 +1,25 @@
+Rails Active Storage was introduced in Rails 5.2
+Before that Paperclip / carrierwave gems were used to integrate static content
+
+Active Storage Setup:
+1. rails active_storage:install
+
+It creates 3 tables in DB:
+1. active_storage_blobs - file_name, content_type, metadata, checksum(represent stored file)
+2. active_storage_attachments - blob_id, file, record_id, record_type - Polymorphic table. connection between model table and blob
+3. active_storage_variant_records - blob_id, variation_digest - store variant information
+
+Attach image from rails console:
+# user = User.last
+# user.profile_pic.attach(io: File.open("./Kavita.jpeg"), filename: "Kavita.jpeg")
+# user.profile_intro.attach(io: File.open("./intro.mp4"), filename: "intro.mp4")
+Pass signed id when retrieving -  ActiveStorage::Blob.first.signed_id - Eg. eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a064a9fc2474ec908f637b2b627c443d13bfca7e
+
+Rails 7 enabled capability to update variant. like thumb image.
+  has_one_attached :profile_pic do |attachable|
+    attachable.variant :thumb, resize: "10x10"
+  end
+
+
+User.last.profile_image.variant(:thumb)
+Rails.application.routes.url_helpers.url_for(User.last.profile_image)

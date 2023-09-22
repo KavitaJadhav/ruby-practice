@@ -1,0 +1,28 @@
+1. bin/rails credentials:edit  - This command will create the credentials file if it does not exist.
+ Additionally, this command will create config/master.key if no master key is defined.
+ Secrets kept in the credentials file are accessible via Rails.application.credentials. For example, with the following decrypted config/credentials.yml.enc
+
+2. bin/rails db:encryption:init -
+Add this entry to the credentials of the target environment:
+
+active_record_encryption:
+  primary_key: EGY8WhulUOXixybod7ZWwMIL68R9o5kC
+  deterministic_key: aPA5XyALhf75NNnMzaspW7akTfZp0lPY
+  key_derivation_salt: xEY0dt6TZcAMg52K7O84wYzkjvbA62Hz
+
+By default encryption is non-deterministic, same values will have different encrypted values
+Set deterministic: true to use same encrypted string for same value. It will allow querying data
+
+downcase: true - set to downcase original value and encrypt - eg. email
+ignore_case: true - This will persist original value. the content with the original case will be stored in the column `original_name`.
+
+config.active_record.encryption.support_unencrypted_data - to Support migrated unencrypted data
+
+keys rotation - It will start decryption with latest key and will keep decrypting until value retrieve
+
+
+deterministic: true, previous: { deterministic: false } - if type changed in between, add previous type to support old values
+
+additionally, it provide capability to generate custom keys, using custom key for single model
+
+can use encrypt, decrypt methods with class instances

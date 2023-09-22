@@ -1,0 +1,4 @@
+debug gem
+The new default for debugging has changed from byebug to the debug gem.
+
+Instead of calling byebug, you now need to call debugger in the code to enter a debugging session.

@@ -1,0 +1,22 @@
+Zeitwerk - code loader engine(introduced in rails 6) - older classic
+
+Applications would only run in the Zeitwerk mode.
+
+Zeitwerk is an efficient and thread-safe code loader for Ruby.
+Given a conventional file structure, Zeitwerk is able to load your project's classes and modules on demand (autoloading), or upfront (eager loading).
+
+Just like classic, Zeitwerk provides the features of code autoloading, eager loading, and reloading.
+However, while classic mode relies on the const_missing callback for loading files, Zeitwerk uses Ruby’s native Module#autoload method.
+
+Disable Zeitwerk mode - config.autoloader = :classic in your application.rb.
+
+zeitwerk is a separate gem which can be included in non rails applications
+
+
+classic mode - it raise const_missing method , const_missing method of ruby is overwritten in Rails to call Module.autoload method
+Zeitwerk mode - it refers to autoload_path, ad mapping for all constants, when new class added it checks mapping, if missing call Module#autolad method directly
+
+
+
+
+

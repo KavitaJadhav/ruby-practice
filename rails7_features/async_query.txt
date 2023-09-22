@@ -1,0 +1,20 @@
+1. set config.active_record.async_query_executor = :global_thread_pool in development.rb
+2. Post.where(published: true).load_async
+
+When the Relation is iterated, if the background query wasn't executed yet, it will be performed by the foreground thread.
+
+load_async sometimes does not schedule queries in the background. There are three cases possible:
+1.The query was fully executed in the background, we just use the result.
+2.The query started to be executed in the background, we wait for it to finish.
+3.The query wasn’t started in the background yet, we execute it in the foreground.
+
+
+load_async is a kind of horizontal scaling for our SQL pipeline.
+
+Async does not work with eager load queries
+
+load_async can be used in ActiveRecord::Base.transaction
+
+Async use threads from common thread pool or multi_thread_pool(for each db connection). Have to configure thread pool correctly
+
+log sample - ASYNC Post Load (0.0ms) (db time 2ms)  SELECT "posts".* FROM "posts" LIMIT 100

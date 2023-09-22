@@ -1,0 +1,28 @@
+#sole
+#find_sole_by!
+
+Methods to find only matching element
+
+user.api_keys.find_sole_by(key: key)
+# => ActiveRecord::RecordNotFound      (if no matching API Key)
+# => #<APIKey ...>                     (if one API Key)
+# => ActiveRecord::SoleRecordExceeded  (if more than one API Key)
+
+APIKey.where(key: key, user_id: user.id).sole
+# => ActiveRecord::RecordNotFound      (if no matching API Key)
+# => #<APIKey ...>                     (if one API Key)
+# => ActiveRecord::SoleRecordExceeded  (if more than one API Key)
+
+
+instead of
+
+
+api_keys = user.api_keys.where(key: key)
+
+if api_keys.length == 1
+  api_key = api_keys.first
+elsif api_keys.length == 0
+  raise "No records found!"
+else
+  raise "More than one matching record found!"
+end
