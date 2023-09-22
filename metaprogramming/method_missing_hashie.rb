@@ -3,6 +3,8 @@
 # Array,String < Object
 
 # When method_missing overridden, overwrite respond_to_missing?
+
+# method_missing is instance method, define_method is class method. define_method can not be classed inside method_missing method.
 class Hashie
   def initialize
     @pairs = {}

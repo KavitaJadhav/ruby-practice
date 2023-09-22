@@ -3,5 +3,7 @@ Parallel Testing:
 - reduce time
 - parallel gem (was used earlier)
 
-Rails 6 brings parallel testing capabilities, enabling developers to execute test suites in parallel. This feature significantly reduces the time required for running tests, especially in large applications with extensive test suites. Parallel testing enhances developer productivity by allowing them to obtain faster feedback and accelerate the testing process.
+Rails 6 brings parallel testing capabilities, enabling developers to execute test suites in parallel.
+This feature significantly reduces the time required for running tests, especially in large applications with extensive test suites.
+Parallel testing enhances developer productivity by allowing them to obtain faster feedback and accelerate the testing process.
 

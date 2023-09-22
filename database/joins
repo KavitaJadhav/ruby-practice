@@ -22,11 +22,11 @@ Eg. return all department info along with employees
 
 full join(full outer join) - Returns record present in both tables along with matching data in opposite table. ON clause is used with  where condition
 will create uniq row for each record in both table. if row has references in other table then it will merge 2 uniq records each from both tables. It can return lots of data
-Eg. return employees had department info
+Eg. return employees and department info
  - select * from employees u full join departments d on u.department_id = d.id;
 
 cross join - map record with every other record . m*n records can be returned . ON clause is not used as it simply maps all records
-Eg. return employees had department info
+Eg. return employees and department info mapping for each row
  - select * from employees u cross join departments d;
  
 self join - join condition is performed on with same table (eg. employees table has manager_id. Manager is another employees). ON clause is used with where condition for column with foreign key to same table.

@@ -4,4 +4,6 @@ Zeitwerk Autoloader
 - replace the classic “require” approach
 
 
-Rails 6 introduces the Zeitwerk autoloader as the default autoloading mechanism, replacing the classic “require” approach. The Zeitwerk autoloader provides a more reliable and efficient autoloading solution, reducing the chances of subtle bugs and improving overall application performance. This change brings enhanced code reliability and simplifies the development process.
+Rails 6 introduces the Zeitwerk autoloader as the default autoloading mechanism, replacing the classic “require” approach.
+The Zeitwerk autoloader provides a more reliable and efficient autoloading solution, reducing the chances of subtle bugs and improving overall application performance.
+This change brings enhanced code reliability and simplifies the development process.

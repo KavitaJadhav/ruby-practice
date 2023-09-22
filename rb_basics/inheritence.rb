@@ -1,4 +1,4 @@
-# Ruby supports only single class inheritance, it does not support multiple class inheritance but it supports mixins.
+# Ruby supports only single class/table inheritance(STI), it does not support multiple class inheritance but it supports mixins(modules).
 
 # Ruby access modifiers
 

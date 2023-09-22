@@ -26,6 +26,6 @@ Restore
 
 Backup
  it is essential to terminate all connections to that particular database before restoring and making the backup file.
- The psq utility enables users to restore SQL script files created by the pg_dump, pg_dumpall utilities.
+ The psql utility enables users to restore SQL script files created by the pg_dump, pg_dumpall utilities.
  These utilities are responsible for generating suitable backed up files.
 

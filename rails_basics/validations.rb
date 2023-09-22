@@ -20,14 +20,6 @@ validates :points, numericality: true
 validates :name, uniqueness: {case_sensitive: false}
 
 
-create
-create!
-save
-save!
-update
-update!
-
-
 # invoking methods(Validation callbacks execute after these methods)
 Create
 create!

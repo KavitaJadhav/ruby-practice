@@ -1,7 +1,10 @@
 # Lambdas are defined with -> {} and procs with Proc.new {}.
-# Procs return from the current method/execution context(no further execution), while lambdas return from the lambda itself.
+# Procs return from the current method/execution context(no further execution), while lambdas return from the lambda itself(inner scope/context).
 # Procs don’t care about the correct number of arguments, while lambdas will raise an exception.
 # There is no dedicated Lambda class. A lambda is just a special Proc object
+
+
+# Verify if rails scope uses lambda - with/without params
 
 sum = ->(a, b) { puts "sum = #{a + b}" }
 sum.call(1, 2)

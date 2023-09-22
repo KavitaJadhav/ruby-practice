@@ -15,11 +15,27 @@ Attach image from rails console:
 # user.profile_intro.attach(io: File.open("./intro.mp4"), filename: "intro.mp4")
 Pass signed id when retrieving -  ActiveStorage::Blob.first.signed_id - Eg. eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a064a9fc2474ec908f637b2b627c443d13bfca7e
 
-Rails 7 enabled capability to update variant. like thumb image.
-  has_one_attached :profile_pic do |attachable|
-    attachable.variant :thumb, resize: "10x10"
-  end
-
+Rails 7 enabled capability to update variant. like thumb image. Use create and use variants, image_processing gem needs o be added in Gemfile(uncomment).
+has_one_attached :profile_pic do |attachable|
+attachable.variant :thumb, resize: "10x10"
+end
 
 User.last.profile_image.variant(:thumb)
 Rails.application.routes.url_helpers.url_for(User.last.profile_image)
+
+
+ActiveStorage::Streaming module is introduced in this PR, which supports native file streaming from the controller.
+Once we include ActiveStorage::Streaming in a controller, we get access to the #send_blob_stream method which takes care of everything,
+from writing the headers to streaming the downloaded data chunks to the client to closing the stream after it is completed.
+
+Now we don't need to re-write response headers and close the stream before and after every streaming action.
+
+class VideoController < ApplicationController
+  include ActiveStorage::Streaming
+
+  def show
+    http_cache_forever(public: true) do
+      send_blob_stream @video, disposition: params[:disposition]
+    end
+  end
+end
