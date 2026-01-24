@@ -1,6 +1,6 @@
 require 'singleton'
-class TestSingleton
+class SingletonClass
   include Singleton
 
 end
-puts TestSingleton.instance.object_id
+SingletonClass.instance

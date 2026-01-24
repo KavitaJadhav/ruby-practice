@@ -21,6 +21,8 @@ class ThreadDemo1
         puts "Started #{element}"
       }
     end
+    puts 'at the end of the method'
+
   end
 end
 
@@ -33,6 +35,8 @@ thread.call # Thread will execute in parallel. (no sequence)
 # Started 1
 
 # ---------
+#note - sometimes rails console gets stuck
+
 class ThreadDemo2
   def call
     list = [1, 2, 3, 4]
@@ -44,6 +48,7 @@ class ThreadDemo2
     end
 
     threads.each(&:join)
+    puts 'at the end of the method'
   end
 end
 
@@ -132,6 +137,7 @@ class ThreadDemo4
 end
 
 ThreadDemo4.new.call # Its always printing last value in the loop. Figure out reason
+ThreadDemo4.new.call # for 5000 different vak
 
 # 500
 # 500

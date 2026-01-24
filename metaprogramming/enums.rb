@@ -11,7 +11,7 @@
 # *args - (Single splat) - used to pass multiple arguments as an array
 # args is an array
 
-# **args - (Single splat) - used to pass arguments as an hash parameters or named parameters. It works only with named parameters
+# **args - (double splat) - used to pass arguments as an hash parameters or named parameters. It works only with named parameters
 # args is a hash
 
 class Enum

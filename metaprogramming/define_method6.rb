@@ -1,4 +1,4 @@
-class User
+class UserUser
   attr_accessor :status
   #   Active and Pending, Cancelled
 

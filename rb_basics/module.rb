@@ -1,6 +1,6 @@
 # A module can be included in another module or class by using the include, prepend and extend keywords.
 
-# include - Use module methods as instance methods. When module and including class have same method, class method takes precedence. When multiple modules are included, methods of most recent module take precedence over others.
+# include - Use module methods as instance methods. When module and including class have same method, class instance method takes precedence. When multiple modules are included, methods of most recent module take precedence over others.
 # prepend - Use module methods as instance methods. When module and including class have same method, module method takes precedence
 # extend - When class extends module, methods in module becomes class methods in the including class
 
@@ -18,23 +18,22 @@ class TestClass
   include TestModule
 
   def method2
-    puts 'class method2'
+    puts 'class instance method2'
   end
 end
 
 TestClass.new.method1
 # method1
 TestClass.new.method2
-# class method2
+# class instance method2
 TestClass.ancestors
 # [TestClass, TestModule, Object, PP::ObjectMixin, Kernel, BasicObject]
-
 # ------------------------------------------------------------------------------------------------------------------
 class TestClass
   prepend TestModule
 
   def method2
-    puts 'class method2'
+    puts 'class instance method2'
   end
 end
 
@@ -50,7 +49,7 @@ class TestClass
   extend TestModule
 
   def method2
-    puts 'class method2'
+    puts 'class instance method2'
   end
 end
 
@@ -59,7 +58,7 @@ TestClass.method1
 TestClass.method2
 # module method2
 TestClass.new.method2
-# class method2
+# class instance method2
 TestClass.ancestors
 # [TestClass, Object, PP::ObjectMixin, Kernel, BasicObject]
 
@@ -84,7 +83,7 @@ TestClass.new.method3 # class_eval is used to monkey patch new code in class / m
 # module class method can not be called as class method directly(outside class)
 module TestModule
   def TestModule.method4
-    puts 'module class method4'
+    puts 'module class instance method4'
   end
 end
 
@@ -97,7 +96,7 @@ class TestClass2
   include TestModule
 
   def self.class_method
-    puts 'calling module class method4 from another class method'
+    puts 'calling module class instance method4 from another class instance method'
 
     TestModule.method4
   end
@@ -107,8 +106,8 @@ end
 TestClass.method4 #undefined method `method4' for TestClass:Class (NoMethodError)
 TestClass.new.method4 # undefined method `method4' for TestClass:instance_id
 TestClass2.class_method
-# calling module class method4 from another class method
-# module class method4
+# calling module class instance method4 from another class instance method
+# module class instance method4
 
 
 # ------------------------------------------------------------------------------------------------------------------
