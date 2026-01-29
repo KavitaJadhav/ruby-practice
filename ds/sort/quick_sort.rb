@@ -1,3 +1,4 @@
+require 'byebug'
 def swap(array, index1, index2)
   tmp = array[index1]
   array[index1] = array[index2]
@@ -7,7 +8,8 @@ end
 def pivot(array, start_index, end_index)
   swap_index = start_index
   value = array[start_index]
-
+# [1,3,4,7,0,8,2,6]
+# byebug
   for i in start_index + 1..end_index
     if value > array[i]
       swap_index = swap_index + 1
@@ -29,7 +31,7 @@ def quick_sort(array, start_index, end_index)
   array
 end
 
-array = [2, 5, 3, 7, 8, 4, 1]
+array = [1,3,4,7,0,8,2,6]
 # puts pivet(array, 0, array.length)
 puts quick_sort(array, 0, array.length - 1)
 # puts quick_sort(array, 0, array.size - 1)

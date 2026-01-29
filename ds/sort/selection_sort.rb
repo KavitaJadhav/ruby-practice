@@ -1,3 +1,9 @@
+# Notes
+# smallest element is moved to initial index
+# element of iteration index is swapped with smallest element in the iteration
+# Space complexity = O(N)
+# Time complexity = O(N^2)
+#
 def selection_sort(array)
   for i in 0..array.size - 1
     for j in i + 1..array.size - 1

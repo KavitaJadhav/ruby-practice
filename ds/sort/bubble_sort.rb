@@ -1,3 +1,10 @@
+# Notes
+# Last element bubbles up to the end
+# keep comparing and swapping numbers until index -1 in each iteration
+# Space complexity = O(N)
+# Time complexity = O(N^2)
+#
+#
 class BubbleSort
   def sort(array)
     array_length = array.size
