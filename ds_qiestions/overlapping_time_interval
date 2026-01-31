@@ -1,0 +1,13 @@
+2. Merge Overlapping Time Intervals
+Problem Given a list of intervals [start, end], merge all overlapping intervals.
+Example
+[[1,3],[2,6],[8,10],[9,12]]
+→ [[1,6],[8,12]]
+What Netflix is testing
+* Sorting + iteration
+* Clean data transformation
+* Thoughtful edge handling
+Strong signals
+* “I’ll sort by start time first”
+* “I maintain a current window”
+* Tests: already merged, single interval, touching edges

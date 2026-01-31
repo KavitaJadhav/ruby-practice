@@ -1,0 +1,12 @@
+3. Longest Substring Without Repeating Characters
+Problem Return the length of the longest substring without repeating characters.
+Example
+"abcabcbb" → 3
+What Netflix is testing
+* Sliding window
+* Hash set/map
+* Incremental optimization
+Strong signals
+* Start with brute force, then optimize
+* Explain why sliding window works
+* Tests: all same chars, empty string

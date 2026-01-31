@@ -1,0 +1,12 @@
+5. Find Most Frequent Element
+Problem Given a list of integers, return the most frequent element. If there are ties, return any one.
+Example
+[1,1,2,3,3,3,4] → 3
+What Netflix is testing
+* Frequency counting
+* Simple optimization
+* Clear intent
+Strong signals
+* One-pass count, second-pass max
+* Mention alternative (heap / sort) but choose simplest
+* Tests: single element, negative numbers, ties

@@ -1,0 +1,16 @@
+
+1. First Unique Character in a String
+Problem Given a string, return the index of the first non-repeating character. If none exists, return -1.
+Example
+"swiss" → 1   // 'w'
+
+
+
+What Netflix is testing
+* Hash map usage
+* Two-pass vs one-pass thinking
+* Edge cases
+Strong signals to say out loud
+* “I’ll count frequencies first, then scan again”
+* “This is O(n) time, O(k) space”
+* Tests: empty string, all repeating, single char
